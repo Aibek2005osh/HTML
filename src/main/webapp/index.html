@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ky">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио - Айбек Дүйшө уулу</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        /* Профиль сүрөтүнүн стилдери */
+        .imgter {
+            border-radius: 10%;
+            width: 200px;
+            height: 270px;
+        }
+        /* Жалпы сүрөттөр үчүн стилдер */
+        img {
+            width: 210px;
+            height: 150px;
+            border-radius: 20%;
+        }
+        h1 {
+            color: #333;
+        }
+        a {
+            text-decoration: none;
+            color: #f1099b;
+            font-weight: bold;
+        }
+        a:hover {
+            color: #000000;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+        .hidden-image, .hidden-info, .private-info {
+            display: none;
+            margin-top: 10px;
+        }
+        .private-info {
+            color: #333;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- Профиль сүрөтү -->
+    <img src="5280744522332104439.jpg" alt="Менин сүрөтүм" class="imgter">
+
+    <h1>АЙБЕК ДҮЙШӨ УУЛУ</h1>
+    <p><strong>Кесиби:</strong> Студент</p>
+    <p><strong>Телефон:</strong> +996 557201673</p>
+    <p><strong>Email:</strong> <a href="mailto:clesh.meder.271@gmail.com">clesh.meder.271@gmail.com</a></p>
+    <p><strong>Instagram:</strong> <a href="https://www.instagram.com/gaparov_aibek_" target="_blank">@gaparov_aibek_</a></p>
+    <p><strong>GitHub:</strong> <a href="https://github.com/Aibek2005osh" target="_blank">https://github.com/Aibek2005osh</a></p>
+
+    <h4>Мен жөнүндө маалымат</h4>
+    <button onclick="togglePrivateInfo()">Жеке маалыматты көрсөтүү</button>
+    <div id="private-info" class="private-info">
+        <h3>Маалымат:</h3>
+        <p>Менин атым Айбек, 2005-жылы 1-январда Ош облусунун Ноокат районунун Арык-Бою айылында туулгамын.</p>
+        <p>2020-жылы мектепти 9-класстын базасынан чыгып, Орто кесиптик лицейдин Электрик кесибин бүткөнмүн.</p>
+        <p>2 жыл руасида иштеп келдим.</p>
+    </div>
+
+    <h2>ата-энем</h2>
+    <table>
+        <tr>
+            <th>Аты-жөнү</th>
+            <th>Туулган жылы</th>
+            <th>Сүрөтү</th>
+        </tr>
+        <tr>
+            <td>NURINSA ORMONOVA</td>
+            <td>1970-03-01</td>
+            <td>
+                <button onclick="showImage('nurin')">Сүрөттү көрсөтүү</button>
+                <button onclick="hideImage('nurin')">Жабуу</button>
+                <div class="hidden-image" id="nurin">
+                    <img src="Снимок экрана 2025-01-26 192349.png" alt="Нуринса сүрөтү">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>TILEKOV DYISHO</td>
+            <td>1967-06-14</td>
+            <td>
+                <button onclick="showImage('tilek')">Сүрөттү көрсөтүү</button>
+                <button onclick="hideImage('tilek')">Жабуу</button>
+                <div class="hidden-image" id="tilek">
+                    <img src="Снимок экрана 2025-01-26 192349.png" alt="Тилек сүрөтү">
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <h2>Бир туугандар</h2>
+    <table>
+        <tr>
+            <th>Аты-жөнү</th>
+            <th>Туулган жылы</th>
+            <th>Сүрөтү</th>
+            <th>Маалымат</th>
+        </tr>
+        <tr>
+            <td>Дүйшө уулу Медербек</td>
+            <td>1992-09-09</td>
+            <td>
+                <button onclick="showImage('mederbek')">Сүрөттү көрсөтүү</button>
+                <button onclick="hideImage('mederbek')">Жабуу</button>
+                <div class="hidden-image" id="mederbek">
+                    <img src="Снимок экрана 2025-01-26 192349.png" alt="Медербек сүрөтү">
+                </div>
+            </td>
+            <td>
+                <button onclick="showInfo('mederbek-info')">Маалыматты көрсөтүү</button>
+                <button onclick="hideInfo('mederbek-info')">Жабуу</button>
+                <div class="hidden-info" id="mederbek-info">
+                    Үй-бүлөлүү, жубайы 1999-жылы туулган. Азыркы учурда 2 кыз, 1 уул тарбиялап жатышат.
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Дүйшө уулу Мамарасул</td>
+            <td>1994-08-14</td>
+            <td>
+                <button onclick="showImage('mamara')">Сүрөттү көрсөтүү</button>
+                <button onclick="hideImage('mamara')">Жабуу</button>
+                <div class="hidden-image" id="mamara">
+                    <img src="Снимок экрана 2025-01-26 192349.png" alt="Мамарасул сүрөтү">
+                </div>
+            </td>
+            <td>
+                <button onclick="showInfo('mamara-info')">Маалыматты көрсөтүү</button>
+                <button onclick="hideInfo('mamara-info')">Жабуу</button>
+                <div class="hidden-info" id="mamara-info">
+                    Үй-бүлөлүү, жубайы 2003-жылы туулган. Азыркы учурда 1 кыз тарбиялап жатышат.
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Дүйшө уулу Мамасали</td>
+            <td>1997-01-03</td>
+            <td>
+                <button onclick="showImage('mamasali')">Сүрөттү көрсөтүү</button>
+                <button onclick="hideImage('mamasali')">Жабуу</button>
+                <div class="hidden-image" id="mamasali">
+                    <img src="Снимок экрана 2025-01-26 192349.png" alt="Мамасали сүрөтү">
+                </div>
+            </td>
+            <td>
+                <button onclick="showInfo('mamasali-info')">Маалыматты көрсөтүү</button>
+                <button onclick="hideInfo('mamasali-info')">Жабуу</button>
+                <div class="hidden-info" id="mamasali-info">
+                    Үй-бүлөлүү, жубайы 1999-жылы туулган. Азыркы учурда 1 кыз, 1 уул тарбиялап жатышат.
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Дүйшө кызы Мээринса</td>
+            <td>1999-10-07</td>
+            <td>
+                <button onclick="showImage('meerinsa')">Сүрөттү көрсөтүү</button>
+                <button onclick="hideImage('meerinsa')">Жабуу</button>
+                <div class="hidden-image" id="meerinsa">
+                    <img src="Снимок экрана 2025-01-26 192349.png" alt="Мээринса сүрөтү">
+                </div>
+            </td>
+            <td>
+                <button onclick="showInfo('meerinsa-info')">Маалыматты көрсөтүү</button>
+                <button onclick="hideInfo('meerinsa-info')">Жабуу</button>
+                <div class="hidden-info" id="meerinsa-info">
+                    Турмушка чыккан. Жолдошу 1994-жылы туулган. Азыркы учурда 2 уул, 1 кыз тарбиялап жатышат.
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <h2>Менин сүрөттөрүм</h2>
+    <button onclick="showImages()">Сүрөттөрдү көрсөтүү</button>
+    <div id="myImages" class="hidden-image">
+        <h4><img src="5280744522332104451 (5).jpg" alt="Сүрөт 1"></h4>
+        <h4><img src="5280744522332104452 (4).jpg" alt="Сүрөт 2"></h4>
+        <h4><img src="5280744522332104460 (3).jpg" alt="Сүрөт 3"></h4>
+        <h4><img src="5280744522332104459 (4).jpg" alt="Сүрөт 4"></h4>
+        <h4><img src="5280744522332104458 (3).jpg" alt="Сүрөт 5"></h4>
+        <h4><img src="Снимок%20экрана%202025-01-26%20192349.png" alt="Сүрөт 6"></h4>
+        <button onclick="hideImages()">Жабуу</button>
+    </div>
+</div>
+
+<script>
+    function showImage(id) {
+        document.getElementById(id).style.display = "block";
+    }
+    function hideImage(id) {
+        document.getElementById(id).style.display = "none";
+    }
+    function showInfo(id) {
+        document.getElementById(id).style.display = "block";
+    }
+    function hideInfo(id) {
+        document.getElementById(id).style.display = "none";
+    }
+    function showImages() {
+        document.getElementById('myImages').style.display = "block";
+    }
+    function hideImages() {
+        document.getElementById('myImages').style.display = "none";
+    }
+    function togglePrivateInfo() {
+        const info = document.getElementById('private-info');
+        if (info.style.display === 'none' || info.style.display === '') {
+            info.style.display = 'block';
+        } else {
+            info.style.display = 'none';
+        }
+    }
+</script>
+
+</body>
+</html>
